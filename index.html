@@ -1,105 +1,174 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>陶德環境工程技師事務所 | Todd Professional Environmental Engineer Office</title>
+  <title>陶德環境工程技師事務所 | Todd PE Environmental Engineering Office</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
+    body { font-family: 'Roboto', 'Noto Sans TC', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); }
+    .credential-card { border-left: 6px solid #10b981; transition: transform 0.2s; }
+    .credential-card:hover { transform: translateX(10px); }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-slate-50 text-slate-900 text-lg">
 
-<!-- Birthday Surprise for Tina -->
-<div id="birthday-popup" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-2xl shadow-xl p-8 max-w-sm text-center animate-bounce">
-    <h2 class="text-3xl font-bold text-pink-600 mb-2">🎂 Happy Birthday Tina! 🎉</h2>
-    <p class="text-gray-700 mb-4">From Todd, with all his heart. ❤️<br>Wishing you love, joy, and endless happiness!</p>
-    <button onclick="document.getElementById('birthday-popup').classList.add('hidden')" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full mt-2">
-      💖 Thank you!
-    </button>
-  </div>
-</div>
-
-<script>
-  window.addEventListener('load', () => {
-    document.getElementById('birthday-popup').classList.remove('hidden');
-  });
-</script>
-
-
-  <!-- Header -->
-  <header class="bg-green-700 text-white p-6 shadow">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <h1 class="text-2xl font-bold mb-2 md:mb-0">陶德環境工程技師事務所<br><span class="text-sm font-normal">Todd Professional Environmental Engineer Office</span></h1>
-      <nav class="space-x-4 text-sm">
-        <a href="#about" class="hover:underline">關於 | About</a>
-        <a href="#services" class="hover:underline">服務 | Services</a>
-        <a href="#contact" class="hover:underline">聯絡 | Contact</a>
-      </nav>
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b-2 border-emerald-700">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex flex-col">
+        <span class="font-black text-2xl text-emerald-900 leading-none tracking-tight">陶德環工</span>
+        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Todd PE Office</span>
+      </div>
+      <div class="flex gap-6 text-base font-black text-slate-600 uppercase tracking-tight">
+        <a href="#about" class="hover:text-emerald-700 transition">About</a>
+        <a href="#services" class="hover:text-emerald-700 transition">Services</a>
+        <a href="#contact" class="hover:text-emerald-700 transition">Contact</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero -->
-  <section class="bg-gray-100 py-20">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold mb-4">智慧環境．專業守護<br><span class="text-2xl text-gray-600">Smart Environment, Professional Commitment</span></h2>
-      <p class="text-lg text-gray-700">結合工程專業與AI科技，打造新世代環境顧問服務。<br>Combining engineering expertise and AI technology to create next-generation environmental consulting.</p>
+  <section class="hero-bg pt-40 pb-24 px-6 text-white overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+        陶德環境工程技師事務所<br>
+        <span class="text-2xl md:text-3xl text-emerald-400 font-bold block mt-2">Todd Professional Environmental Engineer Office</span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-slate-300 font-medium mb-12 max-w-2xl mx-auto">
+        智慧環境 · 專業守護<br>
+        <span class="italic text-lg">Smart Environment, Professional Commitment</span>
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 text-left">
+        <div class="bg-white/10 border border-emerald-400/50 p-4 rounded-2xl">
+          <p class="text-xs font-bold text-emerald-400 uppercase mb-1">USA Licensed</p>
+          <p class="text-xl font-black">美國環境工程技師 (PE)</p>
+          <p class="text-xs opacity-70 italic">Licensed Professional Engineer (Environmental), USA</p>
+        </div>
+        <div class="bg-white/10 border border-emerald-400/50 p-4 rounded-2xl">
+          <p class="text-xs font-bold text-emerald-400 uppercase mb-1">Global/Regional Registered</p>
+          <p class="text-xl font-black">國際 / 亞太工程師 (IntPE)</p>
+          <p class="text-xs opacity-70 italic">IntPE / APEC Engineer (Environmental)</p>
+        </div>
+        <div class="bg-white/10 border border-emerald-400/50 p-4 rounded-2xl">
+          <p class="text-xs font-bold text-emerald-400 uppercase mb-1">Taiwan Licensed</p>
+          <p class="text-xl font-black">台灣環境工程技師</p>
+          <p class="text-xs opacity-70 italic">Certified Environmental Engineer, Taiwan</p>
+        </div>
+        <div class="bg-white/10 border border-emerald-400/50 p-4 rounded-2xl">
+          <p class="text-xs font-bold text-emerald-400 uppercase mb-1">Digital Innovation</p>
+          <p class="text-xl font-black">AI 數據顧問</p>
+          <p class="text-xs opacity-70 italic">AI-Driven Environmental Solutions</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 px-4 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-bold mb-4">關於我們｜About Us</h3>
-    <p class="text-gray-700 leading-relaxed mb-4">
-      本事務所由專業環境工程技師創立，具備製造業環境管理與數位轉型多年經驗，專注於環境資料分析、感測技術、AI應用與污染控制設計。
-    </p>
-    <p class="text-gray-700 leading-relaxed">
-      Our office is founded by a licensed professional environmental engineer with extensive experience in manufacturing environmental management and digital transformation. We specialize in environmental data analysis, sensing technologies, AI applications, and pollution control system design.
-    </p>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="bg-gray-50 py-16 px-4">
+  <section id="about" class="py-20 px-6 bg-white">
     <div class="max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold mb-6">服務項目｜Our Services</h3>
-      <ul class="space-y-4 text-gray-800 text-base list-disc pl-6">
-        <li>
-          環保法規諮詢與技師簽證服務<br>
-          <span class="text-sm text-gray-600">Environmental regulation consulting & licensed engineer signing</span>
-        </li>
-        <li>
-          工廠污染控制規劃與設備設計<br>
-          <span class="text-sm text-gray-600">Factory pollution control planning & equipment design</span>
-        </li>
-        <li>
-          環安衛、永續或其他系統程式設計與開發<br>
-          <span class="text-sm text-gray-600">EHS, ESG and other environmental system softwares development</span>
-        </li>
-        <li>
-          環境/安全之AI模型建置與預測服務<br>
-          <span class="text-sm text-gray-600">AI modeling & forecasting for environmental/safety applications</span>
-        </li>
-        <li>
-          環境感測器應用與數據分析<br>
-          <span class="text-sm text-gray-600">Environmental sensors application & data analytics</span>
-        </li>
-      </ul>
+      <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="flex-1">
+          <h2 class="text-3xl font-black text-slate-900 mb-6">關於我們 | About Us</h2>
+          <div class="space-y-6 text-slate-700 text-xl leading-relaxed">
+            <p class="font-bold border-l-4 border-emerald-600 pl-4">
+              本事務所由資深環境工程技師創立，具備製造業環境管理與數位轉型多年經驗。
+            </p>
+            <p class="text-base text-slate-500 italic">
+              Founded by a veteran Professional Engineer with years of experience in manufacturing environmental management and digital transformation. We specialize in environmental data analytics, sensing technology, AI applications, and pollution control system design.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 px-4 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-bold mb-4">聯絡方式｜Contact</h3>
-    <div class="text-gray-700 space-y-2">
-      <p>Email：<a href="mailto:yclin.todd@gmail.com" class="text-green-700 underline">yclin.todd@gmail.com</a></p>
-      <p>電話 Phone：<a href="tel:+886963083767" class="text-green-700 underline">0963-083-767</a></p>
-      <p>地址 Address：臺中市西屯區台灣大道四段847號16樓<br>
-         16F., No.847, Sec. 4, Taiwan Blvd., Xitun Dist., Taichung City, Taiwan</p>
+  <section id="services" class="py-20 px-6 bg-slate-100">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-center mb-16 underline decoration-emerald-500 decoration-8 underline-offset-8">
+        服務項目 | Our Services
+      </h2>
+      
+      <div class="grid gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow-sm credential-card">
+          <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
+            <div>
+              <h3 class="text-2xl font-black text-emerald-900 mb-1">環保法規諮詢與技師簽證服務</h3>
+              <p class="text-lg font-bold text-slate-600">Environmental Regulation Consulting & Engineering Certification</p>
+            </div>
+            <i class="fas fa-file-signature text-3xl text-slate-200"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm credential-card">
+          <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
+            <div>
+              <h3 class="text-2xl font-black text-emerald-900 mb-1">工廠污染控制規劃與設備設計</h3>
+              <p class="text-lg font-bold text-slate-600">Industrial Pollution Control Planning & Equipment Design</p>
+            </div>
+            <i class="fas fa-industry text-3xl text-slate-200"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm credential-card">
+          <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
+            <div>
+              <h3 class="text-2xl font-black text-emerald-900 mb-1">EHS / ESG 管理系統程式開發</h3>
+              <p class="text-lg font-bold text-slate-600">EHS & ESG Management System Software Development</p>
+            </div>
+            <i class="fas fa-code text-3xl text-slate-200"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm credential-card">
+          <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
+            <div>
+              <h3 class="text-2xl font-black text-emerald-900 mb-1">環境 AI 模型建置與感測數據分析</h3>
+              <p class="text-lg font-bold text-slate-600">AI Modeling & Environmental Data Analytics</p>
+            </div>
+            <i class="fas fa-microchip text-3xl text-slate-200"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-green-700 text-white text-center py-4">
-    <p class="text-sm">&copy; 2025 陶德環境工程技師事務所 | Todd Professional Environmental Engineer Office. All Rights Reserved.</p>
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-slate-900 rounded-[3rem] p-10 md:p-20 text-white relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/20 blur-[80px]"></div>
+        
+        <div class="relative z-10 text-center">
+          <h2 class="text-3xl md:text-4xl font-black mb-8">啟動您的永續轉型<br><span class="text-emerald-400">Start Your Sustainability Journey</span></h2>
+          
+          <div class="flex flex-col md:flex-row gap-6 justify-center mb-12">
+            <a href="mailto:yclin.todd@gmail.com" class="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 transition">
+              <i class="fas fa-envelope"></i> Email Us
+            </a>
+            <a href="tel:+886963083767" class="bg-white text-slate-900 hover:bg-slate-100 px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 transition">
+              <i class="fas fa-phone-alt"></i> Call Us
+            </a>
+          </div>
+
+          <div class="space-y-4 text-slate-300 font-bold">
+            <p class="text-xl">臺中市西屯區台灣大道四段847號16樓</p>
+            <p class="text-sm opacity-60">16F., No.847, Sec. 4, Taiwan Blvd., Xitun Dist., Taichung City, Taiwan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-slate-50 text-center border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-sm text-slate-400 font-black uppercase tracking-[0.2em]">
+        &copy; 2026 陶德環境工程技師事務所 <br class="sm:hidden"> 
+        Todd Professional Environmental Engineer Office
+      </p>
+    </div>
   </footer>
 
 </body>
